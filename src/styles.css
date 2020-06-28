@@ -1,0 +1,86 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.logo{
+  font-family: 'Pacifico', cursive !important;
+  font-size: 40px;
+  max-width: 400px
+}
+.logo img{
+  transform: rotate(20deg);
+  padding:10px
+}
+.tagline{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+.heading{
+  max-width: 400px
+  
+}
+
+.btn{
+  padding: 8px 16px;
+  background-color: hsl(0, 99%, 42%);
+  color:white;
+  border-radius: 20px;
+  transition: all 0.5s
+  
+}
+.btn:hover{
+  padding: 8px 26px;
+  background-color: hsl(0, 99%, 42%);
+  color:white;
+  border-radius: 20px
+  
+}
+
+input{
+  padding: 12px 26px;
+  border-radius: 3px;
+  background-color: hsl(0, 99%, 42%);
+  color: white;
+  border: none;
+  margin: 10px
+
+}
+input:focus{
+  border: none !important
+}
+
+
+.table{
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: #ff2424;
+  height:100px;
+  max-width: 100px!important;
+  margin: 10px;
+  
+}
+.table-center{
+  
+  background-color:hsl(0, 99%, 42%);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px
+}
+
+.tableContainer{
+  margin: 10px auto;
+max-width: 600px;
+}
+img{
+  transform: rotate(20deg)
+}
+/* input:focus{
+background-color: white;
+border:2px solid tomato
+} */
