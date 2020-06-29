@@ -2,9 +2,7 @@
 import React from "react";
 import "./styles.css"
 import Navigate from "./Navigate"
-import Book from "./Book"
-import ThankYou from "./ThankYou"
-import Reserve from "./Reserve"
+import {Link} from "react-router-dom"
 
 const Home =()=>{
   return (
@@ -20,8 +18,8 @@ const Home =()=>{
               Love to eact delicious Swarma Then Book
               Your Table now..
           </h4>
-          <button className="btn mt-3"
-              >BOOK NOW</button>
+          <Link to="/book" className="btn mt-3"
+              >BOOK NOW</Link>
           </div>
         </div>
       </div>
