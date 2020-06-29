@@ -48,8 +48,18 @@ input{
   background-color: hsl(0, 99%, 42%);
   color: white;
   border: none;
-  margin: 10px
+  margin: 10px;
+  width: 240px
 
+}
+select{
+  padding: 12px 48px;
+  border-radius: 3px;
+  background-color: hsl(0, 99%, 42%);
+  color: white;
+  border: none;
+  margin: 10px;
+  width: 240px
 }
 input:focus{
   border: none !important

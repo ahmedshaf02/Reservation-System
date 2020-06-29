@@ -6,7 +6,7 @@ import Book from "./Book"
 import ThankYou from "./ThankYou"
 import Reserve from "./Reserve"
 
-const Page =()=>{
+const Home =()=>{
   return (
     <>
       <div className="container">
@@ -25,11 +25,8 @@ const Page =()=>{
           </div>
         </div>
       </div>
-  <Book/>
-<Reserve/>
-<ThankYou/>
     </>
   )
 }
 
-export default Page
+export default Home
