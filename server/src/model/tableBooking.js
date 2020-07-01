@@ -1,5 +1,6 @@
 
 const mongo = require("mongoose")
+const ObjectId = mongo.Schema.Types
 
 const tableBookingSchema = mongo.Schema({
 
@@ -9,7 +10,9 @@ const tableBookingSchema = mongo.Schema({
     tableName:String,
     capacity:String,
     date:String,
-    time:String
+    time:String,
+    lcoation:String,
+    bookingDate:{type:ObjectId,ref:"Reservation"}
 })
 
 mongo.model("Booking",tableBookingSchema)

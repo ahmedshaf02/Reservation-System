@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 
 router.post("/tablebook", (req, res) => {
   console.log()
-const {name,email,mobile,time,date,tableName,capacity} = req.body
+const {name,email,mobile,time,date,tableName,capacity,location,id} = req.body
   const booking = new Booking({
       name,
       email,
@@ -18,12 +18,27 @@ const {name,email,mobile,time,date,tableName,capacity} = req.body
       tableName,
       time,
       date,
-      capacity
+      capacity,
+      bookingDate:id,
+      location
   })
   booking.save()
     .then(data => {
       if(!data){
         res.status(422).json({error:"not booked"})
+      }
+      res.json(data)
+      console.log(data)
+    })
+    .catch(err => console.log(err));
+});
+
+router.post("/finddate", (req, res) => {
+  console.log(req.body)
+    Reservation.find({date:req.body.date})
+    .then(data => {
+      if(!data){
+        res.status(422).json({error:"not found date"})
       }
       res.json(data)
     })
@@ -43,6 +58,11 @@ router.post("/createdate", (req, res) => {
       res.json(data)
     })
     .catch(err => console.log(err));
+});
+
+router.post("/reserve", (req, res) => {
+
+
 });
 
 
