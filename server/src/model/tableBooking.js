@@ -11,7 +11,7 @@ const tableBookingSchema = mongo.Schema({
     capacity:String,
     date:String,
     time:String,
-    lcoation:String,
+    location:String,
     bookingDate:{type:ObjectId,ref:"Reservation"}
 })
 

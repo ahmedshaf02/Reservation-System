@@ -9,29 +9,40 @@ router.get("/", (req, res) => {
 });
 
 router.post("/tablebook", (req, res) => {
-  console.log()
-const {name,email,mobile,time,date,tableName,capacity,location,id} = req.body
-  const booking = new Booking({
-      name,
-      email,
-      mobile,
-      tableName,
-      time,
-      date,
-      capacity,
-      bookingDate:id,
-      location
+  console.log(req.body)
+  const {name,email,mobile,time,date,tableName,capacity,location,id,updateData} = req.body
+
+  Reservation.updateOne({_id:id},{$set:{"data":updateData}})
+  .then(data=>{
+    if(!data){
+      res.status(422).json({error:"not booked try again"})
+    }
+
+      const booking = new Booking({
+          name,
+          email,
+          mobile,
+          tableName,
+          time,
+          date,
+          capacity,
+          bookingDate:id,
+          location
+      })
+      booking.save()
+        .then(data => {
+          if(!data){
+            res.status(422).json({error:"not booked"})
+          }
+          res.json(data)
+          console.log(data)
+        })
+        .catch(err => console.log(err));
   })
-  booking.save()
-    .then(data => {
-      if(!data){
-        res.status(422).json({error:"not booked"})
-      }
-      res.json(data)
-      console.log(data)
-    })
-    .catch(err => console.log(err));
+  .catch(err=>console.log(err))
 });
+
+
 
 router.post("/finddate", (req, res) => {
   console.log(req.body)
@@ -44,6 +55,8 @@ router.post("/finddate", (req, res) => {
     })
     .catch(err => console.log(err));
 });
+
+
 
 router.post("/createdate", (req, res) => {
   const table = new Reservation({
@@ -58,11 +71,6 @@ router.post("/createdate", (req, res) => {
       res.json(data)
     })
     .catch(err => console.log(err));
-});
-
-router.post("/reserve", (req, res) => {
-
-
 });
 
 
