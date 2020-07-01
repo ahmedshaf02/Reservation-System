@@ -25,7 +25,7 @@ const AppContextProvider =(props)=>{
 console.log(tableData)
   return (
     <>
-      <AppContext.Provider value={{tableData,confirm,setConfirm,tableSearchInfo,addTableData,addBooking,searchInfo,tableBooked}}>
+      <AppContext.Provider value={{tableData,setTableData,confirm,setConfirm,tableSearchInfo,addTableData,addBooking,searchInfo,tableBooked}}>
           {props.children}
       </AppContext.Provider>
     </>

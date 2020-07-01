@@ -8,7 +8,7 @@ import {Redirect} from "react-router-dom"
 
 const ThankYou =()=>{
   const {confirm} = useContext(AppContext)
-  console.log(confirm)
+  // console.log(confirm)
   // if(confirm){
   //   return <Redirect path="/book"/>
   // }

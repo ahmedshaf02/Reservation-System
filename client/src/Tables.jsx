@@ -11,7 +11,7 @@ const FormBooking =(props)=>{
   for(let i=0; i<chair;i++){
     chairs.push(
 
-       <div  className="col-6 col-md-4 chairs">
+       <div key={i}  className="col-6 col-md-4 chairs">
             <div>
               {
                 isBooked ?(

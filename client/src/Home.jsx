@@ -14,7 +14,7 @@ const Home =()=>{
           <div className="heading">
           
           <h4>
-               Hey Are You  Swarma Fan, 
+               Hey Are You A Swarma Fan, 
               Love to eact delicious Swarma Then Book
               Your Table now..
           </h4>

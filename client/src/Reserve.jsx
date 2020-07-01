@@ -9,7 +9,7 @@ import {useHistory} from "react-router-dom"
 
 const Reserve =()=>{
 
-  const {tableBooked,searchInfo,setConfirm} = useContext(AppContext)
+  const {tableBooked,setTableData,searchInfo,setConfirm,tableData} = useContext(AppContext)
 
   const name = useRef(null)
   const email = useRef(null)
@@ -18,6 +18,7 @@ const Reserve =()=>{
   
   const handleInfoSubmit=(e)=>{
     const{id,date,tableName,capacity,location} = tableBooked
+    console.log(location,tableName)
     const {time} = searchInfo
     e.preventDefault()
     const infoName = name.current.value
@@ -28,6 +29,10 @@ const Reserve =()=>{
       return alert("please fill form")
     }
 
+    const updateData = tableData.data.map(ele=>(
+      ele.name === tableName?{...ele,isBooked:true}:ele
+    ))
+
     
     fetch("https://74lm2.sse.codesandbox.io/tablebook",{
       method:"post",
@@ -36,13 +41,14 @@ const Reserve =()=>{
       },
       body:JSON.stringify({
         name:infoName,email:infoEmail,mobile:infoMobile,
-        time,date,location,capacity,id,tableName
+        time,date,location,capacity,id,tableName,updateData
       })
     })
     .then(data=>data.json())
     .then(data=>{
       console.log(data)
       setConfirm(data)
+      setTableData({...tableData,data:updateData})
       history.push("/thankyou")
     })
     

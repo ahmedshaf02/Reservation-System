@@ -20,10 +20,11 @@ const FormBooking =()=>{
     const location = getLocation.current.value
     const size = getsSize.current.value
 
+    tableSearchInfo({date,time,location,size})
+
     if(!date || !size || !location || !time){
       return alert("please enter date")
     }
-    tableSearchInfo({date,time,location,size})
     
     fetch("https://74lm2.sse.codesandbox.io/finddate",{
       method:"post",
@@ -34,7 +35,6 @@ const FormBooking =()=>{
     })
     .then(data=>data.json())
     .then(data=>{
-      // console.log(data[0])
       addTableData(data[0])
     })
    
