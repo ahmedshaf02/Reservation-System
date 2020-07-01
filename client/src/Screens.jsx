@@ -13,7 +13,7 @@ const Screens =()=>{
       <Route exact path="/"><Home/></Route>
       <Route path="/book"><Book/></Route>
       <Route path="/thankyou"><ThankYou/></Route>
-      <Route path="reserve"><Reserve/></Route>
+      <Route path="/reserve"><Reserve/></Route>
     </>
   )
 }
