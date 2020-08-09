@@ -25,6 +25,8 @@ const FormBooking =()=>{
     if(!date || !size || !location || !time){
       return alert("please enter date")
     }
+      
+      console.log(date)
     
     fetch("https://reservation-booking.herokuapp.com/finddate",{
       method:"post",
