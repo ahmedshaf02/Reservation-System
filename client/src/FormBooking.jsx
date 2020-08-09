@@ -26,7 +26,7 @@ const FormBooking =()=>{
       return alert("please enter date")
     }
     
-    fetch("https://74lm2.sse.codesandbox.io/finddate",{
+    fetch("https://reservation-booking.herokuapp.com/finddate",{
       method:"post",
       headers:{
         "Content-Type":"application/json"
