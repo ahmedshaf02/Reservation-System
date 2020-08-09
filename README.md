@@ -1,9 +1,9 @@
 # Reservation-System
 ## a shwarma restaurant table reservation sysytem
 
-### please do visit here [app](https://.vercel.app)
+### please do visit here [Reservation-System](https://.vercel.app)
 
-**Medium post about Instacalm** [app](https://medium.com/@ahmedshaf02/)
+**Medium post about Instacalm** [Reservation-System](https://medium.com/@ahmedshaf02/)
 
 
 ### Project Frontend Tech Stack
