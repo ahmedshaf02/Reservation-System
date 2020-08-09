@@ -5,7 +5,7 @@
 
 ### please do visit here [Reservation-System](https://.vercel.app)
 
-**Medium post about [Reservation-System](https://medium.com/@ahmedshaf02/)
+###Medium post about [Reservation-System](https://medium.com/@ahmedshaf02/)
 
 
  # Demo
