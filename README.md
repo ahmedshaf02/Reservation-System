@@ -23,10 +23,8 @@
 ![booking](https://firebasestorage.googleapis.com/v0/b/fir-login-react-66d68.appspot.com/o/images%2Fshwarma.PNG?alt=media&token=e0f5f20d-5d37-4a1a-acd7-e30bd6ea8686)
 
 
-## Details 
+## Details &  Booking Confirmation
 ![email](https://firebasestorage.googleapis.com/v0/b/fir-login-react-66d68.appspot.com/o/images%2Fshwarma2.PNG?alt=media&token=9e30d30d-2d18-40c4-a35f-ff033b650f20%22)
-
-## Booking Confirmation
 ![email](https://firebasestorage.googleapis.com/v0/b/fir-login-react-66d68.appspot.com/o/images%2Fshwarma2.PNG?alt=media&token=9e30d30d-2d18-40c4-a35f-ff033b650f20%22)
 
 ## MongDB and Schema
