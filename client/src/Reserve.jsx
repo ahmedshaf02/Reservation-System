@@ -34,7 +34,7 @@ const Reserve =()=>{
     ))
 
     
-    fetch("https://74lm2.sse.codesandbox.io/tablebook",{
+    fetch("https://reservation-booking.herokuapp.com/tablebook",{
       method:"post",
       headers:{
         "Content-Type":"application/json"
